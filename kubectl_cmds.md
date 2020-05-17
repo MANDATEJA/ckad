@@ -12,3 +12,18 @@ kubectl edit pod <pod_name> #Lets you edit pod configuration
 
 * To extract pod definition file from a running pod::
 kubectl get pod <pod_name> -o yaml > pod-definition.yml
+
+## Replica Set related commands
+
+kubectl get replicasets
+
+kubectl get replicasets -o wide
+
+kubectl describe repliaset <replicaset_name>
+
+kubectl delete repliaset <replicaset_name>
+
+kubectl edit repliaset <replicaset_name> #Lets you edit repliaset configuration
+
+** To extract repliaset definition file from a running repliaset::
+kubectl get repliaset <repliaset_name> -o yaml > repliaset-definition.yml
