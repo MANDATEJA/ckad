@@ -25,5 +25,7 @@ kubectl delete repliaset <replicaset_name>
 
 kubectl edit repliaset <replicaset_name> #Lets you edit repliaset configuration
 
+kubectl scale replicaset <replicaset_name> --replicas=5
+
 * To extract repliaset definition file from a running repliaset::
 kubectl get repliaset <repliaset_name> -o yaml > repliaset-definition.yml
