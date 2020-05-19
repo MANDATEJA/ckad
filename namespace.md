@@ -1,9 +1,9 @@
 ## Namespaces
 
-* # Connecting to a Service within same namespace::
+* ### Connecting to a Service within same namespace::
 mysql.connect("db-service")
 
-* # Connecting to a Service in different namespace::
+* ### Connecting to a Service in different namespace::
 mysql.connect("db-service.dev.svc.clutser.local") # where dev=namespace,svc=service,domain=cluster.local
 
 ## Namespace commands:
