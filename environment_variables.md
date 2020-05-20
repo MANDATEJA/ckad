@@ -1,9 +1,11 @@
 ## Env value types
 
 ### Plain Key Value
+```yaml
 env:
  - name: APP_COLOR
    value: blue
+```   
    
 ### ConfigMap
 ```yaml
