@@ -24,7 +24,7 @@ data:
  DB_User: root
  DB_password: passwd
  ```
- 
+ There secrets will be available in environment variable form inside container
  It is better to base64 encode and cretae secret and then decode that inside container
  
  kubectl create -f secret-definition.yml
