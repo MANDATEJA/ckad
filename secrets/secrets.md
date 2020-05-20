@@ -28,3 +28,12 @@ data:
  It is better to base64 encode and cretae secret and then decode that inside container
  
  kubectl create -f secret-definition.yml
+
+### secrets in volumes:
+We can also configure secrets and volume mount them to container
+```yaml
+volumes:
+ - name: app-secret-volume
+   secret:
+    secretName: app-secret
+```
