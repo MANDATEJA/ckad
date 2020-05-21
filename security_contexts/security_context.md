@@ -9,8 +9,6 @@ metadata:
 spec:
  securityContext:
   runAsUser: 1000
-  capabilities:
-   add: ["MAC_ADMIN"]
  containers:
   - name: ubuntu
     image: ubuntu
@@ -32,3 +30,6 @@ spec:
      capabilities:
       add: ["MAC_ADMIN"]
 ```
+
+### Note: 
+Capabilities are only supported at container level and not at pod level.
