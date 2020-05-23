@@ -15,3 +15,20 @@ kubectl taint node <node_name> kay=value:taint-effect
 ex: kubectl taint node node1 app=blue:NoSchedule
 
 ### To set tolerations on pod:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+ name: my-app-pod
+ labels:
+  tier: app
+spec:
+ containers:
+  - name: webapp
+    image: nginx
+ tolerations:
+  - key: "app"
+    operator: "Equal"
+    value: "blue"
+    effect: "NoSchedule"
+```
