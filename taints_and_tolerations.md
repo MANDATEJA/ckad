@@ -6,6 +6,9 @@ Toleration: pod - Pods that can tolerate the taint can land on node
 
 ### To set a taint on a node:
 kubectl taint node <node_name> kay=value:taint-effect
+### To remove a taint on a node
+kubectl taint node <node_name> kay=value:taint-effect
+Ex: kubectl taint nodes master node-role.kubernetes.io/master:NoSchedule-
 
 #### Taint-effect:
 1. NoSchedule - pods will not be scheduled on the node
