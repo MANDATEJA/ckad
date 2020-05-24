@@ -73,3 +73,8 @@ Affinity section in above pod definition file describes scduling a pod on a node
 1. requiredDuringSchedulingIgnoredDuringExecution
 2. preferredDuringSchedulingIgnoredDuringExecution
 3. requiredDuringSchedulingRequiredDuringExecution
+
+### operator type in affinity section:
+1. In
+2. NotIn
+3. Exists
