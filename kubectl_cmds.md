@@ -33,3 +33,12 @@ kubectl get repliaset <repliaset_name> -o yaml > repliaset-definition.yml
 ## Generic commands
 
 kubectl get all # To see all created objects
+
+## To view logs of a pod
+
+kubectl logs -f <pod_name>
+
+## To view logs of a particular container of a multicontainer pod
+
+kubectl logs -f <pod_name> <image_name>
+
