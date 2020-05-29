@@ -44,3 +44,8 @@ kubectl logs -f <pod_name>
 
 kubectl logs -f <pod_name> <image_name>
 
+## To view cpu info
+
+kubectl top node
+
+kubectl top pods
