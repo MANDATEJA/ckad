@@ -8,6 +8,7 @@ kind: Job
 metadata:
  name:math-add-job
 spec:
+ completions: 3 #replicas
  template:
   spec:
    containers:
