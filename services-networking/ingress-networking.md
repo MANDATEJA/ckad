@@ -31,3 +31,23 @@ kubectl get ingress
 
 
 Ingress creates a layer 7 Load balancer server and routes the traffic to specified service
+
+### Ingress using rules:
+```yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: ingress-wear-watch
+spec:
+ rules:
+  - http:
+     paths:
+      - path: /wear
+        backend:
+         serviceName: wear-service
+         servicePort: 80
+      - path: /watch
+        backend:
+         serviceName: watch-service
+         servicePort: 80
+```
