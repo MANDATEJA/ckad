@@ -51,3 +51,27 @@ spec:
          serviceName: watch-service
          servicePort: 80
 ```
+
+### Ingress using URL:
+```yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: ingress-wear-watch
+spec:
+ rules:
+  - host: wear.my-online-store.com
+    http:
+     paths:
+      - path: /wear
+        backend:
+         serviceName: wear-service
+         servicePort: 80
+  - host: watch.my-online-store.com
+    http:
+     paths:
+      - path: /watch
+        backend:
+         serviceName: watch-service
+         servicePort: 80
+```
