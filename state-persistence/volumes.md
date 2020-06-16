@@ -20,3 +20,14 @@ spec:
      path: /data
      type: Directory
 ```
+
+=> using hostPath in volume mounts is not preferable in a keberetes cluster as all nodes may not contain same directory and same data
+
+### For ex: to configure AWS EBS on a pod:
+```yaml
+volumes:
+ - name: data-volume
+   awsElasticBlockStore:
+    volumeID: <volume-id>
+    fsType: ext4
+```
