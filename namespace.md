@@ -10,7 +10,7 @@
 kubectl create namespace <namespace_name>
 
 To set a namespace as default namespace:
-kubectl confgi ser-context $(kubectl config current-context) --namespace=dev
+kubectl config set-context $(kubectl config current-context) --namespace=dev
 
 To get pods in a namespace:
 kubectl get pods --namespace=<namespace_name>
